@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RootNamespace>test_csharp_sch_application</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="contracts\" />
+    <Folder Include="services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\test-csharp-sch-domain\test-csharp-sch-domain.csproj" />
+  </ItemGroup>
+</Project>
