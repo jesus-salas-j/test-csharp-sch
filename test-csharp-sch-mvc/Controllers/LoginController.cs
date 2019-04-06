@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using testcsharpschmvc.Models;
 
 namespace test_csharp_sch_mvc.Controllers
 {
@@ -7,8 +8,16 @@ namespace test_csharp_sch_mvc.Controllers
         [HttpGet]
         public IActionResult Signin()
         {
-            return View("Index");
+            SigninViewModel model = new SigninViewModel();
+            return View("Index", model);
         }
 
+        [HttpPost]
+        [ActionName("Signin")]
+        public IActionResult Signin_Post([FromForm]string username, [FromForm]string password)
+        {
+            SigninViewModel model = new SigninViewModel(username);
+            return View("Index", model);
+        }
     }
 }
