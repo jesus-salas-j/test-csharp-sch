@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test-csharp-sch-unit-tests"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test-csharp-sch-application", "test-csharp-sch-application\test-csharp-sch-application.csproj", "{5536E984-07D9-4603-ACC0-C6F7E78AE654}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test-csharp-sch-mvc", "test-csharp-sch-mvc\test-csharp-sch-mvc.csproj", "{326627DC-CAA5-4EE1-83FC-DC38E13E272F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test-csharp-sch-integration-tests", "test-csharp-sch-integration-tests\test-csharp-sch-integration-tests.csproj", "{065DB7E0-14F5-407F-ADD5-0854A179627C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,5 +29,13 @@ Global
 		{5536E984-07D9-4603-ACC0-C6F7E78AE654}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5536E984-07D9-4603-ACC0-C6F7E78AE654}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5536E984-07D9-4603-ACC0-C6F7E78AE654}.Release|Any CPU.Build.0 = Release|Any CPU
+		{326627DC-CAA5-4EE1-83FC-DC38E13E272F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{326627DC-CAA5-4EE1-83FC-DC38E13E272F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{326627DC-CAA5-4EE1-83FC-DC38E13E272F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{326627DC-CAA5-4EE1-83FC-DC38E13E272F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{065DB7E0-14F5-407F-ADD5-0854A179627C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{065DB7E0-14F5-407F-ADD5-0854A179627C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{065DB7E0-14F5-407F-ADD5-0854A179627C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{065DB7E0-14F5-407F-ADD5-0854A179627C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
