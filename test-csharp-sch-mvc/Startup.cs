@@ -2,6 +2,10 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using test_csharp_sch_application.contracts;
+using test_csharp_sch_application.respositoryContracts;
+using test_csharp_sch_application.services;
+using test_csharp_sch_infrastructure;
 
 namespace test_csharp_sch_mvc
 {
@@ -17,6 +21,8 @@ namespace test_csharp_sch_mvc
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddSingleton<IAuthenticationRepository, AuthenticationRepository>();
+            services.AddSingleton<IAuthenticator, Authenticator>();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

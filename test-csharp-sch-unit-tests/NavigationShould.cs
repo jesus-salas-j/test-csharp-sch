@@ -9,12 +9,12 @@ namespace test_csharp_sch_unit_tests
     [TestClass]
     public class NavigationShould
     {
-        private static INavigation navigation;
+        private static INavigation _navigation;
 
         [ClassInitialize]
         public static void BeforeAll(TestContext context)
         {
-            navigation = new Navigation();
+            _navigation = new Navigation();
         }
 
         [TestMethod]
@@ -23,7 +23,7 @@ namespace test_csharp_sch_unit_tests
             User user = new User(Roles.PAGE_1);
             Page page = new Page("Page 1");
 
-            bool userIsAllowedToAccessPage = navigation.IsAccessAllowed(user, page);
+            bool userIsAllowedToAccessPage = _navigation.IsAccessAllowed(user, page);
 
             Assert.IsTrue(userIsAllowedToAccessPage);
         }
@@ -34,7 +34,7 @@ namespace test_csharp_sch_unit_tests
             User user = new User(Roles.PAGE_2);
             Page page = new Page("Page 2");
 
-            bool userIsAllowedToAccessPage = navigation.IsAccessAllowed(user, page);
+            bool userIsAllowedToAccessPage = _navigation.IsAccessAllowed(user, page);
 
             Assert.IsTrue(userIsAllowedToAccessPage);
         }
@@ -45,7 +45,7 @@ namespace test_csharp_sch_unit_tests
             User user = new User(Roles.PAGE_3);
             Page page = new Page("Page 3");
 
-            bool userIsAllowedToAccessPage = navigation.IsAccessAllowed(user, page);
+            bool userIsAllowedToAccessPage = _navigation.IsAccessAllowed(user, page);
 
             Assert.IsTrue(userIsAllowedToAccessPage);
         }

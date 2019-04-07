@@ -23,4 +23,8 @@
   <ItemGroup>
     <Compile Remove="Dtos\Credentials.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\test-csharp-sch-application\test-csharp-sch-application.csproj" />
+    <ProjectReference Include="..\test-csharp-sch-infrastructure\test-csharp-sch-infrastructure.csproj" />
+  </ItemGroup>
 </Project>

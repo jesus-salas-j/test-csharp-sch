@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test-csharp-sch-mvc", "test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test-csharp-sch-integration-tests", "test-csharp-sch-integration-tests\test-csharp-sch-integration-tests.csproj", "{065DB7E0-14F5-407F-ADD5-0854A179627C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test-csharp-sch-infrastructure", "test-csharp-sch-infrastructure\test-csharp-sch-infrastructure.csproj", "{1157D4D2-9617-4862-B4AC-04986167DD95}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,5 +39,9 @@ Global
 		{065DB7E0-14F5-407F-ADD5-0854A179627C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{065DB7E0-14F5-407F-ADD5-0854A179627C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{065DB7E0-14F5-407F-ADD5-0854A179627C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1157D4D2-9617-4862-B4AC-04986167DD95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1157D4D2-9617-4862-B4AC-04986167DD95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1157D4D2-9617-4862-B4AC-04986167DD95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1157D4D2-9617-4862-B4AC-04986167DD95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

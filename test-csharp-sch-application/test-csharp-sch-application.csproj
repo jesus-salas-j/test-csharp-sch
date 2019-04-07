@@ -8,6 +8,7 @@
   <ItemGroup>
     <Folder Include="contracts\" />
     <Folder Include="services\" />
+    <Folder Include="respositoryContracts\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\test-csharp-sch-domain\test-csharp-sch-domain.csproj" />
