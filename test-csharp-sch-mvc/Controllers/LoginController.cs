@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using test_csharp_sch_application.contracts;
 using testcsharpschmvc.Models;
 
@@ -26,6 +27,7 @@ namespace test_csharp_sch_mvc.Controllers
         {
             if (_authenticator.IsAllowed(username, password))
             {
+                HttpContext.Session.SetString("Username", username);
                 SigninViewModel model = new SigninViewModel(username);
                 return View("Index", model);
             }

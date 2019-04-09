@@ -3,28 +3,22 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Content Remove="wwwroot\css\site.css" />
-    <Content Remove="Views\Home\About.cshtml" />
-    <Content Remove="Views\Home\Contact.cshtml" />
-    <Content Remove="Views\Shared\_CookieConsentPartial.cshtml" />
-    <Content Remove="Properties\launchSettings.json" />
-    <Content Remove="Views\Login\Main.cshtml" />
-  </ItemGroup>
+ 
   <ItemGroup>
     <Folder Include="Views\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Login\" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Remove="Dtos\Credentials.cs" />
+    <Folder Include="Views\App\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\test-csharp-sch-application\test-csharp-sch-application.csproj" />
     <ProjectReference Include="..\test-csharp-sch-infrastructure\test-csharp-sch-infrastructure.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Views\App\Page1cshtml.cs" />
   </ItemGroup>
 </Project>

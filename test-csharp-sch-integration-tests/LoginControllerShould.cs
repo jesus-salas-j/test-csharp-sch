@@ -1,6 +1,7 @@
 using System.Net;
 using System.Net.Http;
 using System.Text;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using test_csharp_sch_mvc;
@@ -54,6 +55,7 @@ namespace test_csharp_sch_integration_tests
 
             Assert.AreEqual(HttpStatusCode.Unauthorized, response.StatusCode);
         }
+
     }
 }
 
