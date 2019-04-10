@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using test_csharp_sch_application.contracts;
 using test_csharp_sch_domain.entities;
 using test_csharp_sch_domain.enums;
+using testcsharpschmvc.Models;
 
 namespace testcsharpschmvc.Controllers
 {
@@ -26,7 +27,7 @@ namespace testcsharpschmvc.Controllers
                 return Forbidden();
             }
 
-            return View();
+            return View(new AppViewModel(user.Username));
         }
 
         [HttpGet]
@@ -40,7 +41,7 @@ namespace testcsharpschmvc.Controllers
                 return Forbidden();
             }
 
-            return View();
+            return View(new AppViewModel(user.Username));
         }
 
         [HttpGet]
@@ -54,7 +55,7 @@ namespace testcsharpschmvc.Controllers
                 return Forbidden();
             }
 
-            return View();
+            return View(new AppViewModel(user.Username));
         }
 
 

@@ -1,8 +1,13 @@
-﻿@{
+﻿@using testcsharpschmvc.Models
+
+@model AppViewModel
+
+@{
     Layout = null;
     ViewData["Title"] = "Page 2";
 }
 
 <div>
     <h4>Page 2</h4>
+    <div>Welcome @Model.Username !!</div>
 </div>
