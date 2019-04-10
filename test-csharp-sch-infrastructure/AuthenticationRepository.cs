@@ -1,29 +1,29 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using test_csharp_sch_application.respositoryContracts;
+using test_csharp_sch_domain.entities;
 
 namespace test_csharp_sch_infrastructure
 {
     public class AuthenticationRepository : IAuthenticationRepository
     {
-        private Dictionary<string, string> _storedCredentials;
+        private IEnumerable<Credentials> _storedCredentials;
 
         public AuthenticationRepository()
         {
-            _storedCredentials = new Dictionary<string, string>();
-            _storedCredentials.Add("username", "password");
-            _storedCredentials.Add("test", "testpwd");
+            _storedCredentials = new List<Credentials>
+            {
+                new Credentials (username: "username", password: "password"),
+                new Credentials (username: "test", password: "testpwd"),
+                new Credentials (username: "fruit", password: "apple")
+            };
         }
 
-        public bool AreRegisteredCredentials(string username, string password)
+        public bool AreRegistered(Credentials credentials)
         {
-            string storedPassword;
-
-            if (_storedCredentials.TryGetValue(username, out storedPassword))
-            {
-                return password.Equals(storedPassword);
-            }
-
-            return false;
+            return _storedCredentials.Any(x => 
+                x.Username.Equals(credentials.Username) &&
+                x.Password.Equals(credentials.Password));
         }
     }
 }

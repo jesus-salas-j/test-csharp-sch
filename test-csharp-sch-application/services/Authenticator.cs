@@ -1,5 +1,6 @@
 ﻿using test_csharp_sch_application.contracts;
 using test_csharp_sch_application.respositoryContracts;
+using test_csharp_sch_domain.entities;
 
 namespace test_csharp_sch_application.services
 {
@@ -12,9 +13,9 @@ namespace test_csharp_sch_application.services
             _authenticatorRepository = authenticatorRepository;
         }
 
-        public bool IsAllowed(string username, string password)
+        public bool AreRegistered(Credentials credentials)
         {
-            return _authenticatorRepository.AreRegisteredCredentials(username, password);
+            return _authenticatorRepository.AreRegistered(credentials);
         }
     }
 }

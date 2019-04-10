@@ -24,8 +24,10 @@ namespace test_csharp_sch_mvc
             services.AddMvc();
             services.AddSingleton<IAuthenticationRepository, AuthenticationRepository>();
             services.AddSingleton<IAuthenticator, Authenticator>();
+            services.AddSingleton<IUsersRepository, UsersRepository>();
+            services.AddSingleton<IUsers, Users>();
             services.AddSession(options =>
-                options.IdleTimeout = TimeSpan.FromMinutes(1));
+                options.IdleTimeout = TimeSpan.FromMinutes(5));
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

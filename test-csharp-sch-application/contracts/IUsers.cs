@@ -2,8 +2,8 @@
 
 namespace test_csharp_sch_application.contracts
 {
-    public interface IAuthenticator
+    public interface IUsers
     {
-        bool AreRegistered(Credentials credentials);
+        User GetUser(string username);
     }
 }

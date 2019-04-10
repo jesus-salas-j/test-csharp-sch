@@ -4,6 +4,6 @@ namespace test_csharp_sch_application.contracts
 {
     public interface INavigation
     {
-        bool IsAccessAllowed(User user, Page page);
+        bool IsAccessAllowed(User user, Pages page);
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using test_csharp_sch_application.contracts;
+using test_csharp_sch_domain.entities;
 using testcsharpschmvc.Models;
 
 namespace test_csharp_sch_mvc.Controllers
@@ -25,7 +26,7 @@ namespace test_csharp_sch_mvc.Controllers
         [ActionName("Signin")]
         public IActionResult Signin_Post([FromForm]string username, [FromForm]string password)
         {
-            if (_authenticator.IsAllowed(username, password))
+            if (_authenticator.AreRegistered(new Credentials(username, password)))
             {
                 HttpContext.Session.SetString("Username", username);
                 SigninViewModel model = new SigninViewModel(username);

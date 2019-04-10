@@ -20,5 +20,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Views\App\Page1cshtml.cs" />
+    <Compile Remove="Controllers\IUsersService.cs" />
   </ItemGroup>
 </Project>

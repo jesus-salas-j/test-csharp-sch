@@ -2,8 +2,8 @@
 
 namespace test_csharp_sch_application.respositoryContracts
 {
-    public interface IAuthenticationRepository
+    public interface IUsersRepository
     {
-        bool AreRegistered(Credentials credentials);
+        User GetUser(string username);
     }
 }

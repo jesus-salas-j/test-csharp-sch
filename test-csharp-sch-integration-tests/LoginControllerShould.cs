@@ -44,7 +44,7 @@ namespace test_csharp_sch_integration_tests
         [TestMethod]
         public void user_login_rejected_for_bad_credentials()
         {
-            string credentials = "username=fruit&password=apple";
+            string credentials = "username=abcdefgh&password=12345";
             HttpResponseMessage response = _client.PostAsync("/Login/Signin",
                 new StringContent(
                     content: credentials,

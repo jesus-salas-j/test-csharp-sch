@@ -3,6 +3,7 @@ using Moq;
 using test_csharp_sch_application.contracts;
 using test_csharp_sch_application.respositoryContracts;
 using test_csharp_sch_application.services;
+using test_csharp_sch_domain.entities;
 
 namespace test_csharp_sch_unit_tests
 {
@@ -22,25 +23,25 @@ namespace test_csharp_sch_unit_tests
         [TestMethod]
         public void allow_access_to_registered_user()
         {
-            string username = "username";
-            string password = "password";
+            Credentials credentials = new Credentials("username", "password");
+             
             _authenticationRepository
-                .Setup(x => x.AreRegisteredCredentials(username, password))
+                .Setup(x => x.AreRegistered(credentials))
                 .Returns(true);
 
-            Assert.IsTrue(_autenticator.IsAllowed(username, password));
+            Assert.IsTrue(_autenticator.AreRegistered(credentials));
         }
 
         [TestMethod]
         public void not_allow_access_to_not_registered_user()
         {
-            string username = "username";
-            string password = "password";
+            Credentials credentials = new Credentials("username", "password");
+
             _authenticationRepository
-                .Setup(x => x.AreRegisteredCredentials(username, password))
+                .Setup(x => x.AreRegistered(credentials))
                 .Returns(false);
 
-            Assert.IsFalse(_autenticator.IsAllowed(username, password));
+            Assert.IsFalse(_autenticator.AreRegistered(credentials));
         }
     }
 }
