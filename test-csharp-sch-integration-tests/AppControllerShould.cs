@@ -22,7 +22,7 @@ namespace test_csharp_sch_integration_tests
         }
 
         [TestMethod]
-        public void show_page_1_when_user_with_role_page1_is_logged()
+        public void Show_page_1_when_user_with_role_page1_is_logged()
         {
             LoginInUserWithPage1Role();
             HttpResponseMessage response = _client.GetAsync("/App/Page1").Result;
@@ -32,7 +32,7 @@ namespace test_csharp_sch_integration_tests
         }
         
         [TestMethod]
-        public void show_page_2_when_user_with_role_page2_is_logged()
+        public void Show_page_2_when_user_with_role_page2_is_logged()
         {
             LoginInUserWithPage2Role();
             HttpResponseMessage response = _client.GetAsync("/App/Page2").Result;
@@ -42,7 +42,7 @@ namespace test_csharp_sch_integration_tests
         }
 
         [TestMethod]
-        public void show_page_3_when_user_with_role_page3_is_logged()
+        public void Show_page_3_when_user_with_role_page3_is_logged()
         {
             LoginInUserWithPage3Role();
             HttpResponseMessage response = _client.GetAsync("/App/Page3").Result;
@@ -52,7 +52,7 @@ namespace test_csharp_sch_integration_tests
         }
 
         [TestMethod]
-        public void forbid_access_to_page_X_when_user_with_role_Y_is_logged()
+        public void Forbid_access_to_page_X_when_user_with_role_Y_is_logged()
         {
             LoginInUserWithPage1Role();
             HttpResponseMessage response = _client.GetAsync("/App/Page3").Result;

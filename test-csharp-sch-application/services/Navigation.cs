@@ -20,5 +20,20 @@ namespace test_csharp_sch_application.services
                     return false;
             }
         }
+
+        public Pages GetFirstAllowedPageFrom(Roles role)
+        {
+            switch (role)
+            {
+                case Roles.PAGE_1:
+                    return Pages.PAGE_1;
+                case Roles.PAGE_2:
+                    return Pages.PAGE_2;
+                case Roles.PAGE_3:
+                    return Pages.PAGE_3;
+            }
+
+            return default(Pages);
+        }
     }
 }

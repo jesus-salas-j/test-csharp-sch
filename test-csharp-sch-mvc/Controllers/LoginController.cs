@@ -2,24 +2,27 @@
 using Microsoft.AspNetCore.Mvc;
 using test_csharp_sch_application.contracts;
 using test_csharp_sch_domain.entities;
-using testcsharpschmvc.Models;
 
 namespace test_csharp_sch_mvc.Controllers
 {
     public class LoginController : Controller
     {
         private readonly IAuthenticator _authenticator;
+        private readonly IUsers _users;
+        private readonly INavigation _navigation;
 
-        public LoginController(IAuthenticator authenticator)
+        public LoginController(IAuthenticator authenticator, IUsers users,
+            INavigation navigation)
         {
             _authenticator = authenticator;
+            _users = users;
+            _navigation = navigation;
         }
 
         [HttpGet]
         public IActionResult Signin()
         {
-            SigninViewModel model = new SigninViewModel();
-            return View("Index", model);
+            return View("Index");
         }
 
         [HttpPost]
@@ -29,11 +32,27 @@ namespace test_csharp_sch_mvc.Controllers
             if (_authenticator.AreRegistered(new Credentials(username, password)))
             {
                 HttpContext.Session.SetString("Username", username);
-                SigninViewModel model = new SigninViewModel(username);
-                return View("Index", model);
+                User user = _users.GetUser(username);
+
+                switch (_navigation.GetFirstAllowedPageFrom(user.Role))
+                {
+                    case Pages.PAGE_1:
+                        return RedirectToAction("Page1", "App");
+                    case Pages.PAGE_2:
+                        return RedirectToAction("Page2", "App");
+                    case Pages.PAGE_3:
+                        return RedirectToAction("Page3", "App");
+                }
             }
 
             return Unauthorized();
+        }
+
+        [HttpGet]
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Signin", "Login");
         }
     }
 }

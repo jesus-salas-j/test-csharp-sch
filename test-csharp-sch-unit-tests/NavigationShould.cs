@@ -56,5 +56,15 @@ namespace test_csharp_sch_unit_tests
 
             Assert.IsFalse(userIsAllowedToAccessPage);
         }
+
+        [TestMethod]
+        public void Get_first_allowed_page_from_user_role()
+        {
+            User user = new User("username", "password", Roles.PAGE_2);
+
+            Pages page = _navigation.GetFirstAllowedPageFrom(user.Role);
+
+            Assert.AreEqual(Pages.PAGE_2, page);
+        }
     }
 }

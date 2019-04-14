@@ -21,5 +21,6 @@
   <ItemGroup>
     <Compile Remove="Views\App\Page1cshtml.cs" />
     <Compile Remove="Controllers\IUsersService.cs" />
+    <Compile Remove="Models\SigninViewModel.cs" />
   </ItemGroup>
 </Project>

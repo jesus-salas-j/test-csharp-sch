@@ -1,8 +1,4 @@
-﻿@using testcsharpschmvc.Models
-
-@model SigninViewModel
-
-@{
+﻿@{
     Layout = null;
     ViewData["Title"] = "Login";
 }
@@ -11,26 +7,17 @@
     <div>
         <h3>Login</h3>
     </div>
-
-    @if (Model.IsUserLogged)
-    {
+    
+    <form asp-action="Signin" asp-controller="Login">
         <div>
-            <h4>Welcome @Model.Username !!</h4>
+            <input name="username" type="text" placeholder="Username" />
         </div>
-    }
-    else
-    {
-        <form asp-action="Signin" asp-controller="Login">
-            <div>
-                <input name="username" type="text" placeholder="Username" />
-            </div>
-            <div>
-                <input name="password" type="text" placeholder="Password" />
-            </div>
-            <div>
-                <input type="submit" value="Log in" />
-            </div>
-        </form>
-    }
+        <div>
+            <input name="password" type="text" placeholder="Password" />
+        </div>
+        <div>
+            <input type="submit" value="Log in" />
+        </div>
+    </form>
 
 </div>

@@ -26,6 +26,7 @@ namespace test_csharp_sch_mvc
             services.AddSingleton<IAuthenticator, Authenticator>();
             services.AddSingleton<IUsersRepository, UsersRepository>();
             services.AddSingleton<IUsers, Users>();
+            services.AddSingleton<INavigation, Navigation>();
             services.AddSession(options =>
                 options.IdleTimeout = TimeSpan.FromMinutes(5));
         }
