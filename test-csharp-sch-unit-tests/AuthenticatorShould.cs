@@ -21,7 +21,7 @@ namespace test_csharp_sch_unit_tests
         }
 
         [TestMethod]
-        public void allow_access_to_registered_user()
+        public void Allow_access_to_registered_user()
         {
             Credentials credentials = new Credentials("username", "password");
              
@@ -33,7 +33,7 @@ namespace test_csharp_sch_unit_tests
         }
 
         [TestMethod]
-        public void not_allow_access_to_not_registered_user()
+        public void Do_not_allow_access_to_not_registered_user()
         {
             Credentials credentials = new Credentials("username", "password");
 

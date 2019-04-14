@@ -17,7 +17,7 @@ namespace test_csharp_sch_integration_tests
         }
 
         [TestMethod]
-        public void find_existent_user()
+        public void Find_existent_user()
         {
             string existingUsername = "username";
 
@@ -27,7 +27,7 @@ namespace test_csharp_sch_integration_tests
         }
 
         [TestMethod]
-        public void not_find_inexistent_user()
+        public void Do_not_find_inexistent_user()
         {
             string existingUsername = "inexistentUser";
 

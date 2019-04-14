@@ -17,7 +17,7 @@ namespace test_csharp_sch_integration_tests
         }
 
         [TestMethod]
-        public void find_default_registered_credentials()
+        public void Find_default_registered_credentials()
         {
             Credentials credentials1 = new Credentials("username", "password");
             Credentials credentials2 = new Credentials("test", "testpwd");
@@ -27,7 +27,7 @@ namespace test_csharp_sch_integration_tests
         }
 
         [TestMethod]
-        public void refuse_not_registered_credentials()
+        public void Refuse_not_registered_credentials()
         {
             Credentials credentials = new Credentials("inexistentUsername", "anyPassword");
             
